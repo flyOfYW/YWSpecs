@@ -29,8 +29,16 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
 #  s.source_files = ''
-   s.source_files = "YWWeatherModule/Classes/**/*","YWWeatherModule/Classes/Model/*.{h,m}"
+   s.source_files = "YWWeatherModule/Classes/**/*"
 
+   
+   s.subspec 'Model' do |ns|
+     ns.source_files = "YWWeatherModule/Classes/Model/*.{h,m}"
+   end
+
+
+   
+   
   # s.resource_bundles = {
   #   'YWWeatherModule' => ['YWWeatherModule/Assets/*.png']
   # }
